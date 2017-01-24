@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "plaza",
+        "scope": null,
+        "escapedName": "plaza",
+        "name": "plaza",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/dustin/Code/tmp"
+    ]
+  ],
+  "_from": "plaza@latest",
+  "_id": "plaza@2.1.0",
+  "_inCache": true,
+  "_location": "/plaza",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/plaza-2.1.0.tgz_1477906588836_0.9599587449338287"
+  },
+  "_npmUser": {
+    "name": "dustinws",
+    "email": "dusstws@gmail.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {
+    "daggy": "0.0.1",
+    "fantasy-combinators": "0.0.1"
+  },
+  "_requested": {
+    "raw": "plaza",
+    "scope": null,
+    "escapedName": "plaza",
+    "name": "plaza",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/plaza/-/plaza-2.1.0.tgz",
+  "_shasum": "46058f0f199217c9b72739dc4eaf72afbec542dd",
+  "_shrinkwrap": null,
+  "_spec": "plaza",
+  "_where": "/Users/dustin/Code/tmp",
+  "author": "",
+  "dependencies": {
+    "@dustinws/fantasy": "^1.2.4",
+    "fantasy-land": "^1.0.1",
+    "jsonwebtoken": "^7.1.9",
+    "mime": "^1.3.4",
+    "mongodb": "^2.2.11",
+    "path-to-regexp": "^1.6.0",
+    "ramda": "^0.22.1"
+  },
+  "description": "Functional Http helpers",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "jsverify": "^0.7.4",
+    "mocha": "^3.1.2",
+    "promise": "^7.1.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "46058f0f199217c9b72739dc4eaf72afbec542dd",
+    "tarball": "https://registry.npmjs.org/plaza/-/plaza-2.1.0.tgz"
+  },
+  "gitHead": "befcdee9bee57e53fc02fd0455453375b3a95e8e",
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "dustinws",
+      "email": "dusstws@gmail.com"
+    }
+  ],
+  "name": "plaza",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "version": "2.1.0"
+}
