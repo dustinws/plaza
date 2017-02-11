@@ -17,3 +17,33 @@ Application code does not interact with the server directly. Responses returned 
 
 #### `Open / Closed Responses`
 In Plaza, a response can be 'open' or 'closed'. When a response is closed, every subsequent action in the composition is essentially skipped. Policies, like auth middleware, work in this way. Instead of 'sending' the requests directly, they 'close' them and pass them back to the application. Every subsequent handler will detect this and exit immediately.
+
+
+#### `Handlers`
+Handlers exist so that application code can be defined in small separate units, and then be re-composed as needed to handle complexity. Handlers are easily composed with other handlers, very much like components on the front end.
+
+
+## API
+
+### `Handler`
+
+#### Construction
+```Javascript
+// An asynchronous action
+const myHandler = Handler((environment) => {
+  const { email, password } = getBody(environment.request);
+
+  return environment.db.users
+    .findOne({ email, password })
+    .map(Maybe.fromNullable)
+    .chain(Maybe.cata({
+      // User Exists
+      Just: user =>
+        updateResponse(chain(ok({ user }))),
+
+      // Invalid Credentials!
+      Nothing: () =>
+        updateResponse(chain(badRequest('Not Authorized.'))),
+    }));
+});
+```
