@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+const { createServer } = require('http');
+const { mongo } = require('../../../lib/loaders');
+const { Http } = require('../../../lib/serializers');
+const dbConfig = require('../config/database');
+
+const main = require('../main');
+
+const PORT = process.env.PORT || 3000;
+
+mongo.map((env) =>
+  createServer(Http(main, env))
+    .listen(PORT, () => {
+      console.log(`Blog running on port ${PORT}`);
+    }))
+  .run({
+    config: {
+      database: dbConfig,
+    }
+  })
+  .fork(console.log, () => {});
